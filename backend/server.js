@@ -1,11 +1,12 @@
 const express = require("express");
-const cors = require("cors");
-const dotenv = require("dotenv");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const { readdirSync } = require("fs");
-const app = express();
-
+const dotenv = require("dotenv");
 dotenv.config();
+
+const app = express();
+app.use(express.json());
 app.use(cors());
 
 //routes
